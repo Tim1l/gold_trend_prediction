@@ -11,3 +11,8 @@ The prefered architecture TCN with 2 hidden layers shows the best result: 38.77%
 The trained for gold neural net was also tested on bitcoins 1 hour data and the result is 41.38% which is more then 8% above random.
 
 There exist also multiple ways to improve the accuracy: find and train 1 min data with this architecture or saturate the selection with additional data.
+
+To use this neural net you should repeat the repeat the steps described in goldtrendprediction_pynb.ipynb for initial price data, create the model with architecture as in file goldtrendprediction_pynb.ipynb and load weights to the model.
+
+checkpoint_filepath = '/right_data_tcn_500ep_xBatch_5000_xLen_200_github'
+model.load_weights(checkpoint_filepath) #upload best weights to the model
